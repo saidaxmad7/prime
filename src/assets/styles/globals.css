@@ -18,10 +18,57 @@
 }
 
 body {
-    background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
-    font-family: "Orbitron", sans-serif;
-    font-size: 16px;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+  font-family: "Orbitron", sans-serif;
+  font-size: 16px;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  z-index: 999;
+  background: radial-gradient(circle, #00bfff 0%, transparent 70%);
+  animation: neonGlow 3s ease-in-out infinite alternate;
+}
+
+body::before {
+  left: 0;
+  box-shadow: 0 0 30px #00bfff, 0 0 60px #00bfff;
+}
+
+body::after {
+  right: 0;
+  box-shadow: 0 0 30px #00bfff, 0 0 60px #00bfff;
+}
+
+@media (max-width: 768px) {
+  body::before,
+  body::after {
+    width: 6px;
+    background: radial-gradient(circle, rgba(0,191,255,0.2) 0%, transparent 70%);
+    box-shadow: 0 0 10px rgba(0,191,255,0.3);
+  }
+}
+
+@keyframes neonGlow {
+  from {
+    opacity: 0.4;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(8px);
+  }
+}
+
 
 a {
     cursor: pointer;

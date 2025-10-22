@@ -6,8 +6,8 @@ export default function Layout() {
     return (
         <>
             <Header />
-            <Main />
             <Footer />
+            <Main />
         </>
     );
 }
