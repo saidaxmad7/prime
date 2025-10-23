@@ -1,23 +1,16 @@
-import Providers from '@/contexts/ProviderContext';
-import "@/assets/styles/globals.css"
-import Loader from '@/components/Loading';
-
-export const metadata = {
-  title: 'Prime Game-Club',
-  description: 'Xivada joylashgan computer game club',
-};
+import "./globals.css";
+import Providers from "@/contexts/ProviderContext"; // shu joyda import qil
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body>
-        <Loader />
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  );
+    return (
+        <html lang='en'>
+            <body>
+                <Providers>{children}</Providers>
+            </body>
+        </html>
+    );
 }
