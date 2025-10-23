@@ -1,16 +1,15 @@
 import "@/assets/styles/globals.css";
-import Providers from "@/contexts/ProviderContext"; // shu joyda import qil
+import Providers from "@/contexts/ProviderContext"; // 👈 shu import muhim
+import { ReactNode } from "react";
 
-export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode;
-}) {
-    return (
-        <html lang='en'>
-            <body>
-                <Providers>{children}</Providers>
-            </body>
-        </html>
-    );
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en">
+      <body>
+        <Providers> 
+          {children}
+        </Providers>
+      </body>
+    </html>
+  );
 }

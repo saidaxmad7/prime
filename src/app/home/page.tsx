@@ -1,3 +1,5 @@
+"use client"
+
 import Banner from "@/components/homepage/Banner";
 import About from "@/components/homepage/About";
 import Location from "@/components/homepage/Location";

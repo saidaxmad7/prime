@@ -1,6 +1,6 @@
 "use client";
 
-import HomePage from "@/pages/HomePage";
+import HomePage from "@/app/home/page";
 import { usePathname } from "next/navigation";
 
 export default function Main() {
