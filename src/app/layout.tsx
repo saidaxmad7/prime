@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/assets/styles/globals.css";
 import Providers from "@/contexts/ProviderContext"; // shu joyda import qil
 
 export default function RootLayout({
