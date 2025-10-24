@@ -77,6 +77,9 @@ export default function Rooms() {
                                 Naraka WS98 mexanik klaviaturasi, S98 USB
                                 interfeysi, o'yin kalitlari, LED yoritgichli
                             </p>
+                            <p className='mt-4'>
+                               Rtx 4060 super, SSD 1t, DDR 16x2 
+                            </p>
                             <p>14 ming so'm soatiga</p>
                         </p>
                     </div>

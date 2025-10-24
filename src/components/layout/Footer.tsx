@@ -45,7 +45,7 @@ export default function Footer() {
 
             <button
               className="relative before:hidden hover:before:flex before:content-['Call'] before:absolute before:-top-7 before:text-[.6rem] before:px-1 before:bg-black before:text-white before:rounded-lg hover:-translate-y-1 hover:scale-110 cursor-pointer bg-white dark:bg-[#191818] p-2 rounded-full flex items-center justify-center"
-              onClick={() => window.location.href = "tel:+998901849299"}
+              onClick={() => window.location.href = "tel:+998918686666"}
             >
               <PhoneOutlined />
             </button>
