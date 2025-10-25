@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://prime-game-club.uz
+
+# Sitemaps
+Sitemap: https://prime-game-club.uz/sitemap.xml

@@ -12,7 +12,6 @@ export const metadata = {
   },
 };
 
-// ✅ RootLayout server component
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">

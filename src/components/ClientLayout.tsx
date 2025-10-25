@@ -1,17 +1,23 @@
 "use client";
 
 import { useEffect, useState, ReactNode } from "react";
-import Image from "next/image";
 import Loader from "@/components/Loading";
 
 export default function ClientLayout({ children }: { children: ReactNode }) {
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        window.addEventListener("load", () => setLoading(false));
-    }, []);
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      setLoading(false);
+    } else {
+      const handleLoad = () => setLoading(false);
+      window.addEventListener("load", handleLoad);
 
-    if (loading) return <Loader />;
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
 
-    return <>{children}</>;
+  if (loading) return <Loader />;
+
+  return <>{children}</>;
 }
